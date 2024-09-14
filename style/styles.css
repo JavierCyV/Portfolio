@@ -1,0 +1,500 @@
+::-webkit-scrollbar {
+    display: none;
+  }
+
+body , html{
+    scrollbar-width: none;
+    background-color: black;
+    overflow: hidden;
+}
+
+.selected{
+    align-items: center;
+    display: flex;
+    color: rgb(255, 102, 46);
+}
+
+button{
+    
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+
+}
+
+.navbar-brand {
+    background-color: #000;
+    padding: 0 15%;
+    font-family: "Poppins", sans-serif;
+    font-weight: bolder;
+    height: 80px; 
+    display: inline-block;
+}
+
+.navbar-menu.is-active {
+    display: block;
+    background-color: #000;
+}
+
+.hero-background {
+    background-color: black;
+    background-position: center; 
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: 75%;
+    
+}
+
+
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white; 
+   
+}
+
+.container{
+    height: fit-content;
+}
+
+.boton {
+    background-color: black; /* Fondo negro */
+    color: white; /* Texto blanco */
+    border: none; /* Sin bordes */
+    padding: 10px 20px; /* Espaciado */
+    font-size: 16px; /* Tamaño de texto */
+    cursor: pointer; /* Cambia el cursor a mano cuando pasa sobre el botón */
+    transition: background-color 0.3s ease; /* Transición suave al cambiar de color */
+}
+
+h1{
+    width:100vw;
+    
+    font-size:  7rem !important;
+    font-weight: bolder !important;
+    font-family: "Playfair Display", serif;
+    font-style: normal;
+}
+
+h2{
+    font-family: "Poppins", sans-serif;
+    letter-spacing: 2px;
+    font-style: normal;
+    text-shadow: 
+    0.5px 0.5px 0px rgba(255, 255, 255, 0.5),   /* Sombra en la esquina inferior derecha */
+    -0.5px 0.5px 0px rgba(255, 255, 255, 0.5),  /* Sombra en la esquina inferior izquierda */
+    0.5px -0.5px 0px rgba(255, 255, 255, 0.5),  /* Sombra en la esquina superior derecha */
+    -0.5px -0.5px 0px rgba(255, 255, 255, 0.5); /* Sombra en la esquina superior izquierda */
+    color: rgb(0, 0, 0);
+    
+}
+h3{
+    
+    font-family: "Monserrat", sans-serif;
+    font-weight: bolder ;
+    font-style: normal;
+
+}
+
+
+footer{
+   
+    font-family: "Poppins", sans-serif;
+    font-weight: 500 ;
+    font-style: normal;
+}
+
+.imagen{
+    height: 70%;
+    padding: 10%;
+    display: block;
+    margin: auto;
+}
+
+.smallImage{
+    border-radius: 10px;
+    display: block;
+    margin: auto;
+    height: auto;
+}
+
+/*Text writer*/
+.code-box {
+    width: 61%;
+    margin: 5px auto;
+    border: 1px solid #000;
+    background-color: #000000; 
+    font-size: 20px;
+}
+/*text writer*/
+
+.Verticalseparator {
+    background-color: rgb(236, 232, 230); 
+    width: 2px; /* Grosor de la línea */
+    height: 100%; /* Asegura que tenga la altura completa de las columnas */
+    min-height: 500px; /* Define una altura mínima para que sea visible */
+    display: inline-block;
+}
+
+
+
+.is-vcentered {
+    align-items: center; 
+}
+
+.titulo{
+    color: #85858548;
+    font-family: "poppins", sans-serif;
+    font-size: 1300%;
+    font-weight: bolder;
+    padding-left: 10% ;
+    
+}
+
+.tituloSkills{
+    color: #85858548;
+    font-family: "poppins", sans-serif;
+    font-size: 1700%;
+    font-weight: bolder;
+    padding-left: 10% ;
+}
+
+.skillsTxt{
+    font-family: "poppins",sans-serif;
+    font-size: 300%;
+    font-weight: bold;
+    text-align: center;
+    display: block;
+    margin: auto;
+    color: #777778;
+}
+
+
+/*Slideshow Start*/
+
+.slideshow-container {
+    position: relative;
+    max-width: 75%;
+    margin: auto;
+}
+
+.slides {
+    display: none;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.slides img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.fade {
+    animation: fade 2s ease-in-out;
+}
+
+@keyframes fade {
+    from { opacity: .4 }
+    to { opacity: 1 }
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 3px;
+    user-select: none;
+    z-index: 10;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/*Slideshow END*/
+/*Splash Screen*/
+
+#splash-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    background-color: black;
+    opacity: 1;
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+    transform: translateY(0);
+}
+
+#splash-screen.hidden {
+    opacity: 0;
+    transform: translateY(-100%);
+}
+
+#splash-screen video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+#splash-text {
+    text-align: center;
+    color: white;
+}
+
+#splash-text h4 {
+    margin-top: 20px;
+    animation: blink 2s infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+#content {
+    transition: opacity 1s ease-in-out;
+}
+
+#content.show {
+    opacity: 1;
+}
+
+/*Pestaña Experience*/
+
+
+.textoCentrado {
+    text-align: center; /* Centra el contenido en el contenedor */
+}
+
+.texto {
+    display: inline-block; /* Mantiene el contenido centrado en el contenedor */
+    text-align: left; /* Justifica el texto dentro del contenedor */
+    max-width: 100%; /* Asegura que el contenido no se desborde */
+
+}
+
+.jobName{
+    font-family: "poppins",sans-serif;
+    font-size: 200%;
+    font-weight: bold;
+    color: #777777;
+    margin-bottom: -10px
+}
+
+.jobPlace{
+    font-family: "poppins",sans-serif;
+    font-weight: bold;
+    color: #777777;
+    margin-top: 0;
+}
+
+.jobDescription{
+    font-family: "poppins",sans-serif;
+    color: #ffffff;
+    margin-left: 3%;
+}
+/*Pestaña contact*/
+.contactTXT{
+    text-align: center;
+    font-size: 500%;
+    font-weight: bolder;
+    color: #ffffff;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center; /* Centra los botones horizontalmente */
+    align-items: center; /* Centra los botones verticalmente */
+    margin: 0;
+}
+
+.social-buttons {
+    display: flex;
+    gap: 1rem; /* Espacio entre los botones */
+}
+
+.social-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px; /* Tamaño del botón */
+    height: 50px; /* Tamaño del botón */
+    border-radius: 50%; /* Hace el botón redondo */
+    background-color: white; /* Fondo blanco */
+    border: 2px solid #ddd; /* Borde opcional */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra opcional */
+    text-decoration: none; /* Elimina el subrayado en los enlaces */
+    color: #333; /* Color del icono */
+    font-size: 24px; /* Tamaño del icono */
+    transition: background-color 0.3s; /* Transición suave para el cambio de color */
+}
+
+.social-button:hover {
+    background-color: #f9f9f9; /* Cambio de color al pasar el ratón */
+}
+
+.social-button i {
+    margin: 0; /* Elimina márgenes alrededor del icono */
+}
+
+
+
+/*Scrolling Text*/
+
+.scrolling-text{
+    font-family: "monserrat",sans-serif;
+    font-size: 600%;
+    font-weight: bolder;
+    color: #000000;
+    margin-bottom: -2%;
+    white-space: nowrap;
+    text-shadow:    
+    1px 1px 0px rgba(255, 255, 255, 0.5),   /* Sombra en la esquina inferior derecha */
+    -1px 1px 0px rgba(255, 255, 255, 0.5),  /* Sombra en la esquina inferior izquierda */
+    1px -1px 0px rgba(255, 255, 255, 0.5),  /* Sombra en la esquina superior derecha */
+    -1px -1px 0px rgba(255, 255, 255, 0.5); /* Sombra en la esquina superior izquierda */;
+    
+}
+.scrolling-text-fade{    
+    font-family: "monserrat",;
+    font-size: 600%;
+    font-weight: bolder;
+    color: #000000;
+    margin-bottom: -2%;
+    white-space: nowrap;
+    text-shadow:    
+    1px 1px 0px #ffffff15,   /* Sombra en la esquina inferior derecha */
+    -1px 1px 0px #ffffff15,  /* Sombra en la esquina inferior izquierda */
+    1px -1px 0px #ffffff15,  /* Sombra en la esquina superior derecha */
+    -1px -1px 0px #ffffff15; /* Sombra en la esquina superior izquierda */;
+    z-index: 1;
+}
+
+.scrolling-text-wrapperIzquierda {
+    width: 200%; 
+    animation: scrollTextIzquierda 8s linear infinite; 
+}
+
+@keyframes scrollTextIzquierda {
+    0% {
+        transform: translateX(-20%);
+    }
+    50% {
+        transform: translateX(-30%); 
+    }
+    100%{
+        transform: translateX(-20%);
+    }
+}
+
+.scrolling-text-wrapperDerecha {
+    width: 200%; 
+    animation: scrollTextDerecha 8s linear infinite; 
+}
+
+@keyframes scrollTextDerecha {
+    0% {
+        transform: translateX(-30%);
+    }
+    50% {
+        transform: translateX(-20%); 
+    }
+    100%{
+        transform: translateX(-30%);
+    }
+}
+
+.separador{
+    margin: 3%;
+}
+.unificador{
+    margin: -7%;
+}
+
+@media (max-width: 768px) {
+    .tituloSkills {
+        font-size: 800%; /* Ajusta el tamaño para pantallas móviles */
+        padding-left: 5%; /* Reduce el padding en pantallas pequeñas */
+    }
+    .titulo {
+        font-size: 300%; /* Ajusta el tamaño para pantallas móviles */
+        padding-left: 5%; /* Reduce el padding en pantallas pequeñas */
+    }
+
+    .Verticalseparator {
+       
+        width: 0px; /* Grosor de la línea */
+        height: 0%; /* Asegura que tenga la altura completa de las columnas */
+        min-height: 0px; /* Define una altura mínima para que sea visible */
+        
+    }
+
+    .skillsTxt{
+        font-size: 150%;
+ 
+    }
+
+    .navbar-brand{
+        text-align: left;
+    }
+  
+    
+    .navbar-menu {
+        width: 100%;
+
+        position: absolute;
+        top: 80px; 
+        left: 0;
+        z-index: 1001;
+    }
+    
+    .scrolling-text{
+        font-size: 450%;
+        margin-bottom: -6%;
+    }
+
+    .scrolling-text-fade{
+        font-size: 450%;
+        margin-bottom: -6%;
+    }
+
+    .unificador{
+        margin: -20%;
+    }
+
+    .contactTXT{
+        font-size: 300%;
+    }
+
+}
