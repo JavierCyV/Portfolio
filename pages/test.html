@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Popup con Formulario</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+  <style>
+    .modal {
+      display: none;
+    }
+    .modal.is-active {
+      display: flex;
+    }
+    .modal-card {
+      background-color: black; /* Fondo negro para el modal */
+      border-radius: 10px;
+      color: white;            /* Texto blanco */
+      border: none;            /* Elimina el borde alrededor del modal */
+      animation: fadeInModal 0.5s ease-out forwards;
+    }
+
+    /* Animación para el contenido del modal */
+    @keyframes fadeInModal {
+      0% {
+        opacity: 0;
+        transform: scale(0.8);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    .modal-card-head,
+    .modal-card-foot {
+      background-color: black; /* Fondo negro para la cabecera y el pie */
+      color: white;            /* Texto blanco */
+      border: none;            /* Elimina bordes entre secciones */
+      padding: 0.75rem 1rem;
+      margin: 2%;
+    }
+    .modal-card-body {
+      background-color: black; /* Fondo negro para el cuerpo del modal */
+      color: white;            /* Texto blanco */
+      border: none;            /* Elimina cualquier borde */
+      padding: 0.75rem 1rem;   /* Ajuste del padding */
+    }
+    input, textarea {
+      background-color: #333;  /* Color gris oscuro para inputs */
+      color: white;            /* Texto blanco */
+      border: 1px solid #555;  /* Borde gris oscuro */
+    }
+  </style>
+</head>
+<body>
+
+<!-- Botón para abrir el popup -->
+<button id="openModal" class="button is-primary">Contacto</button>
+
+<!-- Popup con el formulario de contacto -->
+<div id="contactModal" class="modal">
+  <div class="modal-background"></div>
+  <div class="modal-card">
+    <header class="modal-card-head">
+      <p class="modal-card-title">Formulario de Contacto</p>
+      <button class="delete" aria-label="close" id="closeModal"></button>
+    </header>
+    <section class="modal-card-body">
+      <form>
+        <div class="field">
+          <label class="label">Nombre</label>
+          <div class="control">
+            <input class="input" type="text" placeholder="Tu nombre">
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="label">Correo Electrónico</label>
+          <div class="control">
+            <input class="input" type="email" placeholder="tu@correo.com">
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="label">Mensaje</label>
+          <div class="control">
+            <textarea class="textarea" placeholder="Escribe tu mensaje aquí"></textarea>
+          </div>
+        </div>
+      </form>
+    </section>
+    <footer class="modal-card-foot">
+      <button class="button is-white is-outlined">Enviar</button>
+      <button class="button is-white is-outlined" id="closeModalFooter">Cancelar</button>
+    </footer>
+  </div>
+</div>
+
+<script>
+  // Mostrar el modal al hacer clic en el botón
+  document.getElementById('openModal').addEventListener('click', function() {
+    document.getElementById('contactModal').classList.add('is-active');
+  });
+
+  // Cerrar el modal al hacer clic en el botón de cerrar o en el fondo
+  document.getElementById('closeModal').addEventListener('click', function() {
+    document.getElementById('contactModal').classList.remove('is-active');
+  });
+
+  document.getElementById('closeModalFooter').addEventListener('click', function() {
+    document.getElementById('contactModal').classList.remove('is-active');
+  });
+
+  // Cerrar el modal al hacer clic en el fondo
+  document.querySelector('.modal-background').addEventListener('click', function() {
+    document.getElementById('contactModal').classList.remove('is-active');
+  });
+</script>
+
+</body>
+</html>
